@@ -1,0 +1,126 @@
+
+
+
+<div id="intro" class="bg-image shadow-1-strong" >
+    <!-- <video  playsinline autoplay muted loop >
+      <source class="h-100" src="assets\pexels-cottonbro-studio-4440817-1920x1080-50fps.mp4" type="video/mp4" />
+    </video> -->
+  
+  <div id="bg"><br><br>
+    <h1>Booking Details</h1>
+    <table id="example" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped table-bordered" cellspacing="0" >
+      <thead class="bg-dark text-white">
+          <tr>
+              <th class="th-sm" >PNR No</th>
+              <th  class="th-sm">Passenger Name</th>
+              <th  class="th-sm">From</th>
+              <th  class="th-sm">To</th>
+              <th  class="th-sm">Contact Number</th>
+              <th  class="th-sm">Bus No</th>
+              <th  class="th-sm">Date</th>
+              <th  class="th-sm">Actions</th>
+              <th  class="th-sm">Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let bookingData of BookingData" id="tableRow">
+              <td>{{bookingData.bookingId}}</td>
+              <td>{{bookingData.passengerName}}</td>
+              <td>{{bookingData.fromPlace}}</td>
+              <td>{{bookingData.arrivalPlace}}</td>
+              <td>{{bookingData.contactNumber}}</td>
+              <td>{{bookingData.busNo}}</td>
+              <td>{{bookingData.busDate}}</td>
+              <td><a ><button (click)="edit(bookingData)" id="onbookbutton"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</button></a></td>
+              <td><a ><button  id="onbookbutton" (click)="deleteBooking(bookingData.bookingId)" >Delete</button></a></td>
+          </tr>
+  </table>
+  </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="staticBackdropLabel">Edit Booking Details</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+    
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label" >Passenger Name</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" name="passengerName" #passengerName [(ngModel)]="updatebooking.passengerName">
+    </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"  >Contact Number</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="contactNumber" #contactNumber [(ngModel)]="updatebooking.contactNumber">
+          
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" >From Place</label>
+          <input type="text" class="form-control" id="exampleInputPassword1"  name="fromPlace" #fromPlace [(ngModel)]="updatebooking.fromPlace">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" >To Place</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="arrivalPlace" [(ngModel)]="updatebooking.arrivalPlace">
+        </div>
+      
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"  >Bus No</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="busNo" [(ngModel)]="updatebooking.busNo">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" >Date</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="busDate" [(ngModel)]="updatebooking.busDate">
+        </div>
+        <small class="update" *ngIf="updateStatus"> 👍 Update Successfully</small>
+        </div> </form>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" (click)="updateBookingDetails()"> Update </button><br><br>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- New Bus Add -->
+
+<div id="newBus">
+<form class="row g-3" (ngSubmit)="saveBooking()" [formGroup]="newbookingForm"> 
+<h1>Add New Booking</h1>
+<div class="col-md-6">
+  <label for="inputEmail4" class="form-label">Passenger Name</label>
+  <input type="email" class="form-control" id="inputEmail4" formControlName="passengerName" [(ngModel)]="bookingNew.passengerName">
+</div>
+<div class="col-md-6">
+  <label for="inputPassword4" class="form-label">From Place</label>
+  <input type="text" class="form-control" id="inputPassword4" formControlName="fromPlace" [(ngModel)]="bookingNew.fromPlace">
+</div>
+<div class="col-6">
+  <label for="inputAddress" class="form-label">To Place</label>
+  <input type="text" class="form-control" id="inputAddress" formControlName="arrivalPlace" [(ngModel)]="bookingNew.arrivalPlace">
+</div>
+<div class="col-6">
+  <label for="inputAddress2" class="form-label">Contact Number</label>
+  <input type="text" class="form-control" id="inputAddress2"  formControlName="busCoach" [(ngModel)]="bookingNew.contactNumber">
+</div>
+<div class="col-md-6">
+  <label for="inputCity" class="form-label">Bus No</label>
+  <input type="text" class="form-control" id="inputCity" formControlName="busNo" [(ngModel)]="bookingNew.busNo">
+</div>
+<div class="col-md-6">
+  <label for="inputCity" class="form-label">Travel Date</label>
+  <input type="date" class="form-control" id="inputCity"  formControlName="busDate" [(ngModel)]="bookingNew.busDate">
+</div>
+<div class="col-12">
+  <button type="submit" class="btn btn-primary">Add</button><br>
+  <small class="update" *ngIf="BusStatus"> 👍 Successfully Added,Booking PNR is: {{bookingIDsave}}</small>
+</div>
+</form>
+</div>
+
+ 
+

@@ -1,0 +1,263 @@
+
+<head>
+    <link rel="font-family" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ropa+Sans&display=swap">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="http://fonts.googleapis.com/css?family=Playfair+Display:900" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Alice:400,700" rel="stylesheet" type="text/css" />
+
+  </head>
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo" routerLink="/userhome" style="font-family:Berkshire Swash;">QuickBus</a>
+    <a><img id="menulogo" src="../assets/logo.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+            
+            <li  class="nav-item">
+                <a class="nav-link" routerLink="/signin"><i class="bi bi-file-earmark-person"></i>Register</a>
+            </li>
+            
+            <li   class="nav-item">
+                <a class="nav-link" routerLink="/contact"><i class="far fa-address-book"></i>Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/offers"><i class="bi bi-award"></i>Offers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/servicepage"><i class="fas fa-tachometer-alt"></i>Our Service Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/bookingpage"><i class="bi bi-ticket-fill"></i>Book Your Ticket</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" routerLink="/ticketinfo"><i class="bi bi-ticket-detailed"></i>Ticket Information</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" routerLink="/cancelticket"><i class="bi bi-ticket-detailed"></i>Cancel Ticket</a>
+          </li>
+            <li class="nav-item  active">
+              <a class="nav-link" routerLink="/userhome"><i class="fa fa-fw fa-home"></i>Home</a>
+          </li>
+          
+        </ul>
+    </div>
+  </nav>
+
+    <div class="bg-img"> 
+      <div id="bg-form">
+        
+        <div id="booking" class="section">
+          <img src="assets/bag1.png" style="position: absolute;" height="100%" width="100%">
+          <div class="section-center">
+            <div class="container">
+              <div class="row">
+                <div class="booking-form">
+                  <div class="booking-bg">
+                    <div class="form-header">
+                      <h2>Make your reservation</h2>
+                      <p>Book For Exciting Discounts</p>
+                    </div>
+                  </div>
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <span class="form-label">Date</span>
+                          <input class="form-control" type="date" required>
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <span class="form-label">From</span>
+                          <select class="form-control">
+                            <option>Chennai</option>
+                            <option>Trichy</option>
+                            <option>Madurai</option>
+                          </select>
+                          <span class="select-arrow"></span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <span class="form-label">To</span>
+                          <select class="form-control">
+                            <option>Chennai</option>
+                            <option>Coimbatore</option>
+                            <option>Krishnagiri</option>
+                          </select>
+                          <span class="select-arrow"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-btn">
+                      <button class="submit-btn" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" routerLink="/bookingpage">Check available Buses</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+        
+    
+     
+    </div>
+    <br><br>
+    <img src="assets/t3.png" height="100%" width="100%">
+    
+    <img src="assets/t1.png" height="100%" width="100%">
+    <img src="assets/t4.png" height="100%" width="100%">
+    <img src="assets/t2.png" height="100%" width="100%">
+    <img src="assets/t6.png" height="100%" width="100%">
+    <img src="assets/t5.png" height="100%" width="100%">
+
+
+
+
+    <!-- <marquee class="animation" behaviour="scroll" direction="right" scrollamount="10"><img src="images/logo.png" alt="buspng" height="80px" width="100px"></marquee> -->
+  
+<!-- 
+
+     <span id="headoffer"><div class="Offers" id="Offer">
+      <a><h1 class="heading">OFFERS</h1></a>
+ -->
+
+
+    <!-- <div class="offer-container">
+          <div class="content"><p> upto Rs 200 on Delhi and North routes 🎉 </p><p><br><p>USE CODE:</p><code style="color: rgb(20, 209, 165); font-size: 20px;">NEWBUS200 <br>
+              <img src="Images/buspng3.jpg" alt="buspng" height="150px" width="150px"></code></p></div>
+          <div class="content"><p>Save Up to Rs 250 on bus  tickets on TSRTC 💵 </p><p><br><p>USE CODE:</p><code style="color: rgb(20, 209, 165); font-size: 20px;">NEWBUS250 <br>
+              <img src="Images/buspng3.jpg" alt="buspng" height="150px" width="150px"></code></p></div> 
+          <div class="content"><p>Save upto Rs 300 on TN and AP route 🎟️ </p><p><br><p>USE CODE:</p><code style="color: rgb(20, 209, 165); font-size: 20px;">NEWBUS300 <br>
+              <img src="Images/buspng3.jpg" alt="buspng" height="150px" width="150px"></code></p></div>
+        </div>
+    </div> -->
+<!--    
+     <span id="headservice"><div class="Service">
+  
+      <h1 class="heading">OUR SERVICE</h1>
+      <h2 class="servicesuhead">CONVENIENCE ON-THE-GO.</h2>
+      <p id="para">Enjoy the following exclusive features on the Quick BUS<br><br>
+          ➠Last Minute Booking - In a hurry to book a bus at the last minute? <br>Choose the bus passing from your nearest boarding point and book in a few easy steps.<br><br>
+          ➠Boarding Point Navigation - Never lose your way while travelling to your boarding point!<br>
+          ➠Comprehensive Ticket Details- Everything that you need to make the travel hassle free - rest stop details, boarding point images, chat with co-passengers, wake-up alarm and much more!</p>
+      <div class="service-container">
+          <div class="content"><h4 class="servicehead">UNMATCHED BENEFITS</h4><p class="servicepara">We take care of your travel beyond ticketing by providing you with innovative and unique benefits.</p></div>
+          <div class="content"><h4 class="servicehead">SUPERIOR CUSTOMER SERVICE</h4><p class="servicepara">We put our experience and relationships to good use and are available to solve your travel issues.</p></div>
+          <div class="content"><h4 class="servicehead">LOWEST PRICES</h4><p class="servicepara">We always give you the lowest price with the best partner offers.</p></div>  
+        </div>
+    </div>  -->
+    <!-- <marquee class="animation" behaviour="scroll" direction="left" scrollamount="10"><img src="Image/buspng.png" alt="buspng" height="80px" width="100px"></marquee>  -->
+
+    <!-- <span id="aboutus"><div class="Aboutus">
+      <h1 class="heading">ABOUT US</h1>
+      <img class="aboutlogo" alt="logo">
+      <h1 class="aboutlogotext" >Quick Bus</h1>
+      <p id="para">Quickbus is the world's largest online bus ticket booking service trusted by over
+          25 million happy customers globally. QuickBus offers bus ticket booking through its website,iOS
+          and Android mobile apps for all major routes.</p>
+    </div> -->
+<!--     
+    <div class="faq">
+      <h1 class="heading">Frequently Asked Questions</h1>
+              <details open>
+                  <summary>How do you do online bus reservation on QuickBus?</summary>
+                  <div class="faq__content">
+                    <p>Ans: Booking a bus ticket online in India is easy with QUICKBUS.
+                      Simply enter the Leav\ing from -- Going to destination details along with the date
+                       you wish to travel in the bus search option on the site. Within seconds you will be given 
+                       a list of buses availability for your route. Select your bus that suits you best for you.
+                        Then just follow the simple steps to the ticket booking payment process and your seat 
+                        will be reserved for your bus journey.</p>
+                  </div>
+                </details>
+                <details>
+                  <summary>Do I need to create an account to book bus tickets on QuickBus?</summary>
+                  <div class="faq__content">
+                    <p>Ans: No, you can book bus tickets as a guest user by providing required passenger details.
+                      However, we recommend you to create an account so that you get the latest information about 
+                      bus availability, ticket details 
+                     and other features which will help you book faster during future transactions</p>
+                  </div>
+                </details>
+                <details>
+                  <summary>How to sign-up QuickBus?</summary>
+                  <div class="faq__content">
+                    <p>Ans: QuickBus offers a one-step sign-up & login process with just an OTP
+                      received on your mail.</p>
+                  </div>
+                </details>
+    </div> --> 
+     <br> <br> <br>
+    
+    <span id="footers">
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <a class="btn btn-outline-light btn-floating m-1"  role="button" style="font-family:Berkshire Swash; border: black hidden;"><img src="assets/logo.png" alt="logo" height="120px" >   Quick Bus</a>
+
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+
+
+          <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            >Contact: 044-4324324324</a>
+
+            <a class="btn btn-outline-light btn-floating m-1"  role="button"
+            >Mail: info@quickbus.com</a>
+
+            <a class="btn btn-outline-light btn-floating m-1"  role="button" style=" border: black hidden;"
+            >Address: No15,Vadapalani,Chennai,India-600342</a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" >quickbus.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>

@@ -1,0 +1,19 @@
+#buttondiv{
+float:right ;
+padding: 10px;
+margin-right: 40px;
+}
+#edit #delete{
+    margin-left: 20px;
+}
+#container{
+    margin: 20px;
+}
+.list-group{
+    border: black solid hidden;
+    border-radius: 20px;
+    
+}
+.list-group-item{
+    background-color: rgb(231, 231, 231);
+}

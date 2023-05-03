@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+#toolbar{
+background-color: rgba(0, 0, 0, 0.844);
+}
+#menulogo{
+    height:30px ;
+    width: 50px;
+}
+span{
+    color: aliceblue;
+}
+.mat-sidenav a:hover{
+    background-color: rgb(95, 95, 95);
+    color: rgb(211, 211, 211);
+    border: white solid hidden;
+    border-radius: 10px;
+}

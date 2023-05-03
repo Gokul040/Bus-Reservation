@@ -1,0 +1,36 @@
+
+    <mat-toolbar id="toolbar">
+    <mat-toolbar-row>
+        <a><img id="menulogo" src="../assets/logo.png" alt="logo"></a>
+      <span  class="example-spacer" style="color: white;">Admin Dashboard</span>
+      <a  routerLink="/userhome"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" style="color: white;"></mat-icon></a>
+    </mat-toolbar-row>
+    </mat-toolbar>
+
+<mat-sidenav-container class="main-header navbar navbar-expand navbar-white navbar-light" >
+
+<mat-sidenav mode="side" opened style="background-color: rgb(0, 0, 0);" class="main-header navbar navbar-expand navbar-white navbar-light">
+    <mat-nav-list style="width:200px;" >
+        <a routerLink="busupdate" mat-list-item ><mat-icon  aria-hidden="false" aria-label="Example bus icon" fontIcon="directions_bus" style="color: white;"></mat-icon ><span> Bus Details</span></a>
+    </mat-nav-list>
+    <mat-nav-list style="width:200px;" >
+        <a routerLink="bookingupdate" mat-list-item><mat-icon  aria-hidden="false" aria-label="Example bus icon" fontIcon="library_books" style="color: white;"></mat-icon><span> Booking Details</span></a>
+    </mat-nav-list>
+    <mat-nav-list style="width:200px;" >
+        <a routerLink="userqueries" mat-list-item><mat-icon  aria-hidden="false" aria-label="Example bus icon" fontIcon="question_answer" style="color: white;"></mat-icon><span> User Queries</span></a>
+    </mat-nav-list>
+    <!-- <mat-nav-list style="width:200px;" >
+        <a routerLink="dashboard" mat-list-item><mat-icon  aria-hidden="false" aria-label="Example bus icon" fontIcon="question_answer" style="color: white;"></mat-icon><span> Dashboard</span></a>
+    </mat-nav-list> -->
+</mat-sidenav>
+
+        <mat-sidenav-content>
+            <p style="height: 100vh;">
+            <router-outlet></router-outlet> </p>
+        </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+
+ 

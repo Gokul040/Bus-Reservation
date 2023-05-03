@@ -1,0 +1,17 @@
+<body>
+  <img src="assets/bg1.jpg" alt="bg" height="100%" width="100%" routerLink="/Home">
+    <div id="bg"><br><br>
+  
+  
+  <form id="loginform" class="col-lg-6 col-md-6 col-12"  (ngSubmit)="ngSubmit()" >
+  <h2 id="loginhead"  ><img src="assets/logo.png" height="30px" width="43px" >QuickBus</h2>
+    <div class="form-group">
+      <h2 id="loginheads" >CANCEL TICKET</h2>
+      <label for="ticketnumber"><i class="bi bi-ticket-fill"></i>  Enter Ticket Number</label>
+      <input type="number" class="form-control" id="ticketnumber" placeholder="Ticket Number" [(ngModel)]="ticketnumber" [ngModelOptions]="{standalone: true}">
+    </div><br>
+    <a routerLink="/userhome"><button type="button" class="btn btn-primary" id="signlater">Back</button></a>
+     <button style="background-color: brown;" type="submit" class="btn btn-primary" id="signlater">CancelTicket</button>
+
+   <br> <h2 *ngIf="status" style="text-align: center;"> Your Ticket Has been Cancelled Succesfully. Thank you for your patience!!</h2>
+  </form><br><br>

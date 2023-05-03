@@ -1,0 +1,22 @@
+body {
+    background: #ffffff;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+  }
+  
+  .bg-image {
+    background-image: url('src/assets/bag1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #submitButton{
+    background-color: rgb(243, 79, 79);
+    border: #ffffff none;
+  }
+  #submitButton:hover{
+    background-color: rgb(175, 33, 33);
+  }
+  h2{
+    text-align: center;
+    
+  }

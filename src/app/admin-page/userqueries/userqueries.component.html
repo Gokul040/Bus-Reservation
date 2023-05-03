@@ -1,0 +1,17 @@
+<div id="container" *ngFor="let Query of query" >
+<div class="list-group" id="listgroup">
+    <div class="list-group-item">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Query: {{Query.queryNo}}</strong> </h5><br>
+        
+      </div>
+      <h5 class="mb-1">Name: {{Query.userName}} </h5>
+      <small>Email:  {{Query.emailAddress}}</small>
+      
+      <p class="mb-1">{{Query.feedbackMessages}}</p>
+      <div id="buttondiv">
+        <button id="delete" type="button" class="btn btn-danger"  (click)="deleteQuery(Query.queryNo)">Delete</button>
+    </div>
+    </div>
+  </div>
+</div>

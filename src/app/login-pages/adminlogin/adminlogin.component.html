@@ -1,0 +1,22 @@
+<body>
+  <img src="assets/bg1.jpg" alt="bg" height="100%" width="100%" >
+  <div id="bg"><br><br>
+<form [formGroup]="signinform"  #sign id="loginform" class="col-lg-6 col-md-6 col-12"  >
+<h1 id="loginhead" ><img src="assets/logo.png" height="30px" width="43px">QuickBus</h1>
+  <h1 id="loginheads" >SIGN IN YOUR ADMIN ACCOUNT</h1>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><i class="bi bi-envelope" style="font-size: 1rem; -webkit-text-stroke-width: 0.5px;"></i>  Email Address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName="user">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small><br>
+    <small style="color: brown;" *ngIf="user && user.invalid && user.touched">*Enter Correct EmailID</small>
+  </div><br>
+  <div class="form-group">
+    <label for="exampleInputPassword1"><i class="bi bi-lock-fill"></i>Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
+    <small style="color: brown;" *ngIf="password && password.invalid && password.touched">*Enter 8 digit character </small>
+  </div><br>
+  <a routerLink="/admindashboard"><button  type="submit" class="btn btn-primary" [disabled]="signinform.invalid">Submit</button></a>
+  <a routerLink="/userhome"><button type="submit" class="btn btn-primary" id="signlater">User Home</button></a>
+</form>
+  </div>
+</body>

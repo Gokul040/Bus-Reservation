@@ -1,0 +1,25 @@
+
+#pagebody{
+    max-width: 1250px;   
+    margin: auto;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    color: brown;
+    text-decoration:underline;
+}
+.card-body{
+    flex: auto;
+}
+#bookbutton{
+    background-color: rgb(246, 93, 93);
+    border: white none;
+    margin: auto;
+    border-radius: 10px;
+}
+#bookbutton:hover{
+    background-color: rgb(221, 52, 52);
+    border: white none;
+    margin: auto;
+}

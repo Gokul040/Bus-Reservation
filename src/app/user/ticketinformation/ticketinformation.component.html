@@ -1,0 +1,67 @@
+<body>
+  <div id="bg"><br><br>
+
+
+<form id="loginform" class="col-lg-6 col-md-6 col-12"  (ngSubmit)="onSubmit()">
+<h2 id="loginhead"  ><img src="assets/logo.png" height="30px" width="43px" ></h2>
+  <div class="form-group">
+    <h2 id="loginheads" >TICKET INFORMATION</h2>
+    <label for="ticketnumber"><i class="bi bi-ticket-fill"></i>  Enter Ticket Number</label>
+    <input type="number" class="form-control" id="ticketnumber" placeholder="Ticket Number" [(ngModel)]="ticketnumber" [ngModelOptions]="{standalone: true}">
+  </div><br>
+  
+  <a><button type="submit" class="btn btn-primary">Show</button></a>
+  
+  <a routerLink="/userhome"><button type="button" class="btn btn-primary" id="signlater">Back</button></a>
+
+  
+</form><br><br>
+
+
+<!-- ticket template --><br>
+<div id="ticketform" class="col-lg-6 col-md-6 col-12"  *ngIf="data" >
+  <h2 id="loginhead"  ><img src="assets/logo.png" height="30px" width="43px"  ></h2>
+  <h2 id="loginhead">Ticket Information - Happy Journey</h2>
+    <div class="category">
+      
+      <h3 ><i class="bi bi-ticket-fill"></i> Ticket Number: </h3><h4>{{data.bookingId}}</h4>
+      
+    </div><br>
+    <div class="category">
+      
+      <h3 ><i class="bi bi-ticket-fill"></i> From: </h3><h4>{{data.fromPlace}}</h4>
+      
+    </div><br>
+    <div class="category">
+      
+      <h3 ><i class="bi bi-ticket-fill"></i> To: </h3><h4>{{data.arrivalPlace}}</h4>
+      
+    </div><br>
+    <div class="category">
+      
+      <h3 ><i class="bi bi-ticket-fill"></i> Bus No: </h3><h4>{{data.busNo}}</h4>
+      
+    </div><br>
+    <div class="category">
+      
+      <h3 ><i class="bi bi-ticket-fill"></i> Date: </h3><h4>{{data.busDate}}</h4>
+      
+    </div><br>
+    <div class="category">
+      
+      <h3 ><i class="bi bi-ticket-fill"></i> Contact Number: </h3><h4>{{data.contactNumber}}</h4>
+      
+    </div><br>
+    <div class="category">
+      
+      <h3 ><i class="bi bi-ticket-fill"></i> Passenger Name: </h3><h4>{{data.passengerName}}</h4>
+      
+    </div><br>
+    <p>If you have any queries please contact contact@quickbus.com</p>
+    <a ><button type="submit" class="btn btn-primary" id="signlater" (click)="printThisPage()">Print</button></a>
+    
+  </div>
+  
+  </div>
+</body>
+

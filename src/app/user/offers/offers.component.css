@@ -1,0 +1,10 @@
+#bookbutton{
+    background-color: rgb(246, 93, 93);
+    border: white none;
+    margin: auto;
+    align-items: center;
+}
+#bookbutton:hover{
+    background-color: rgb(221, 52, 52);
+    border: white none;
+}
